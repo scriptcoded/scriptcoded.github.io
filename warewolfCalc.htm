@@ -1,0 +1,233 @@
+<html>
+<style>
+.button{
+ text-decoration:none; 
+ text-align:center; 
+ margin: 1px;
+ padding:11px 1px; 
+ border:none; 
+ border-radius:2px;
+  
+ font:18px Arial, Helvetica, sans-serif; 
+ font-weight:bold; 
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #3ba4c7 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #3ba4c7 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #3ba4c7 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#3ba4c7 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba4c7', endColorstr='#3ba4c7',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#3ba4c7 100%);   
+ -webkit-box-shadow:0px 0px 20px #bababa, inset 0px 0px -7px #ffffff; 
+ -moz-box-shadow: 0px 0px 20px #bababa,  inset 0px 0px -7px #ffffff;  
+ box-shadow:0px 0px 20px #bababa, inset 0px 0px -7px #ffffff;
+}
+</style>
+	<body>
+		<!-
+		Medic
+		Spy
+		Cupid
+		Warewolf
+		Citizen
+		-->
+<input name="playerText"id="playerText"type="text"value="Players" readonly class="button" style="width:140; height:24;">
+<input name="players"id="players"type="text"value="10" onchange="update();" class="button" style="width:140; height:24;" pattern="\d*">
+<br>
+<input name="citizen"id="citizen"type="text"value="citizen" onchange="update();"class="button" style="width:140; height:24;" autocapitalize="none" spellcheck="false">
+<input name="citizens"id="citizens"type="text"value="" readonly " onchange="update();"class="button" style="width:140; height:24;">
+<br>
+<input name="new00"id="new00"type="text"value="medic" onchange="update();"class="button" style="width:140; height:24;" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off">
+<input name="new01"id="new01"type="text"value="1" onchange="update();"class="button" style="width:140; height:24;" pattern="\d*">
+<br>
+<input name="new10"id="new10"type="text"value="spy" onchange="update();"class="button" style="width:140; height:24;" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off">
+<input name="new11"id="new11"type="text"value="1" onchange="update();"class="button" style="width:140; height:24;" pattern="\d*">
+<br>
+<input name="new20"id="new20"type="text"value="cupid" onchange="update();"class="button" style="width:140; height:24;" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off">
+<input name="new21"id="new21"type="text"value="1" onchange="update();"class="button" style="width:140; height:24;" pattern="\d*">
+<br>
+<input name="new10"id="new30"type="text"value="warewolf" onchange="update();"class="button" style="width:140; height:24;" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off">
+<input name="new11"id="new31"type="text"value="2" onchange="update();"class="button" style="width:140; height:24;" pattern="\d*">
+<br>
+<input name="new20"id="new40"type="text"value="" onchange="update();"class="button" style="width:140; height:24;" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off">
+<input name="new21"id="new41"type="text"value="0" onchange="update();"class="button" style="width:140; height:24;" pattern="\d*">
+<br>
+<input name="new10"id="new50"type="text"value="" onchange="update();"class="button" style="width:140; height:24;" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off">
+<input name="new11"id="new51"type="text"value="0" onchange="update();"class="button" style="width:140; height:24;" pattern="\d*">
+<br>
+<input name="new20"id="new60"type="text"value="" onchange="update();"class="button" style="width:140; height:24;" autocapitalize="none" spellcheck="false" autocomplete="off" autocorrect="off">
+<input name="new21"id="new61"type="text"value="0" onchange="update();"class="button" style="width:140; height:24;" pattern="\d*">
+<br>
+		
+		<input type="button" id="calculate" value="Do it!" class="button" onclick="calculate()" style="width:286;"/>
+<br>
+		<input type="button" id="update" value="Menu" class="button" onclick="update()"style="width:140;"/>
+         <input type="button" id="reload" value="Reset" class="button" onclick="reload()"style="width:140;"/>
+		
+		<script>
+update();
+function reload()
+{
+location.reload(true);
+alert("Everything reset!");
+}
+			function update(){
+playerNoteGiven=false;
+citizen = document.getElementById("citizen").value;
+players = document.getElementById("players").value;
+new00 = document.getElementById("new00").value;
+new01 = document.getElementById("new01").value;
+new10 = document.getElementById("new10").value;
+new11 = document.getElementById("new11").value;
+new20 = document.getElementById("new20").value;
+new21 = document.getElementById("new21").value;
+new30 = document.getElementById("new30").value;
+new31 = document.getElementById("new31").value;
+new40 = document.getElementById("new40").value;
+new41 = document.getElementById("new41").value;
+new50 = document.getElementById("new50").value;
+new51 = document.getElementById("new51").value;
+new60 = document.getElementById("new60").value;
+new61 = document.getElementById("new61").value;
+				citizens = players-new01-new11-new21-new31-new41-new51-new61;
+				rand = 0;
+document.getElementById("citizens").value =citizens;
+if(citizens<0){
+document.getElementById("citizens").style.color = "red";
+}
+else {
+document.getElementById("citizens").style.color = "white";
+}
+if(citizens==0){
+document.getElementById("citizens").style.color = "yellow";
+}
+			}
+			
+			function calculate(){
+if(citizens<0){
+alert("Error: There are not enough players.");
+return;
+}
+else if(citizens==0){
+if(!playerNoteGiven){
+alert("Note: You will experience more from the gameplay if there are atleast one " + citizen + ".");
+playerNoteGiven=true;
+}
+}
+else
+playerNoteGiven=true;
+				var rand = Math.floor((Math.random() * 8) + 1);
+				if (rand == 1)
+				{
+					if (new01 > 0)
+					{
+						alert("You're a " + new00 + "!");
+						new01 -=1;
+					}
+					else
+					{
+					done();
+					}
+				}
+				
+				else if (rand == 2)
+				{
+					if (new11 > 0)
+					{
+						alert("You're a " + new10 + "!");
+						new11 -=1;
+					}
+					else
+					{
+					done();
+					}
+				}
+				
+				else if (rand == 3)
+				{
+					if (new21 > 0)
+					{
+						alert("You're a " + new20 + "!");
+						new21 -=1;
+					}
+					else
+					{
+					done();
+					}
+				}
+				
+				else if (rand == 4)
+				{
+					if (new31 > 0)
+					{
+						alert("You're a " + new30 + "!");
+						new31 -=1;
+					}
+					else
+					{
+					done();
+					}
+				}
+				
+				else if (rand == 5)
+				{
+					if (new41 > 0)
+					{
+						alert("You're a " + new40 + "!");
+						new41 -=1;
+					}
+					else
+					{
+					done();
+					}
+				}
+                 else if (rand == 6)
+				{
+					if (new51 > 0)
+					{
+						alert("You're a " + new50 + "!");
+						new51 -=1;
+					}
+					else
+					{
+					done();
+					}
+				}
+                 else if (rand == 7)
+				{
+					if (new61 > 0)
+					{
+						alert("You're a " + new60 + "!");
+						new61 -=1;
+					}
+					else
+					{
+					done();
+					}
+				}
+                 else if (rand == 8)
+				{
+					if (citizens > 0)
+					{
+						alert("You're a " + citizen + "!");
+						citizens -=1;
+					}
+					else
+					{
+					done();
+					}
+				}
+			}
+			
+			function done(){
+				if (new01 == 0 && new11 == 0 && new21 == 0 && new31 == 0 && new41 == 0 && new51 == 0 && new61 == 0 && citizens == 0){
+					alert('That was it!');
+				}
+				else
+				{
+					calculate();
+				}
+			}
+		</script>
+	</body>
+<html>
