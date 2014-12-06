@@ -1,5 +1,5 @@
-function end(){
-
+function%20end(){
+	
 	c='
 512|556
 512|557
@@ -103,7 +103,7 @@ function end(){
 	d.forms[0].spear.value=1;
 	d.forms[0].sword.value=0;
 	d.forms[0].axe.value=0;
-	d.forms[0].spy.value=1;
+	d.forms[0].spy.value=0;
 	d.forms[0].light.value=0;
 	d.forms[0].heavy.value=0;
 	d.forms[0].ram.value=0;
@@ -112,6 +112,5 @@ function end(){
 	d.forms[0].archer.value=0;
 	d.forms[0].marcher.value=0;
 	d.forms[0].knight.value=0;
-}
 }
 end();
