@@ -120,8 +120,24 @@ input[type="number"] {
 				<textarea name="output" id="output" readonly rows="18" cols="100" onclick="this.focus();this.select()"></textarea>
 			</div>
 		</fieldset>
+		
+		<fieldset>
+		<legend>Hämta koordinater</legend>
+			<p>Först måste du gå in på <a href="http://www.twstats.se/index.php?page=search" target="_blank">TW Stats söksida</a> och söka efter stammens eller spelarens namn. Sedan trycker du på ett av sökresultaten, kopierar länken och klistrar in nedan.
+			<br>
+			<input type="text" name="nameurl" value="" id="nameurl">
+			<label for="nameurl">URL</label>
+			<br>
+			<input type="button" name="gotourl" value="Koordinater" id="gotourl" onclick="getId();">
+		</fieldset>
 	
 		<script>
+		function getId() {
+			str = document.getElementById("nameurl").value;
+			var id=str.substring(str.lastIndexOf("=")+1,str.lastIndexOf(""));
+			window.open('http://www.twstats.se/sv28/index.php?page=tribe&mode=export_villages&export=1&exporttype=custom&continent=&custom=%x|%y&id=' + id,'_blank')
+		}
+		
 		function generate(){
 			spear = document.getElementById("spear").value;
 			sword = document.getElementById("sword").value;
