@@ -1,6 +1,7 @@
 <!--
-http://www.twstats.se/sv28/index.php?page=tribe&mode=export_villages&export=1&exporttype=custom&continent=&custom=%x|%y&id=1553
-http://www.twstats.se/index.php?page=search&type=tribe&name=DEATH
+http://www.twstats.se/sv28/index.php?page=tribe&mode=export_villages&export=1&exporttype=custom&continent=&custom=%x|%y&id=
+http://www.twstats.se/sv28/index.php?page=player&mode=villages&exporttype=custom&custom=%x|%y&export=1&id=
+http://www.twstats.se/index.php?page=search&type=tribe&name=
 -->
 
 <html>
@@ -128,14 +129,19 @@ input[type="number"] {
 			<input type="text" name="nameurl" value="" id="nameurl">
 			<label for="nameurl">URL</label>
 			<br>
-			<input type="button" name="gotourl" value="Koordinater" id="gotourl" onclick="getId();">
+			<input type="button" name="gotourl" value="Koordinater" id="gotourl" onclick="getCoordinates();">
 		</fieldset>
 	
 		<script>
-		function getId() {
-			str = document.getElementById("nameurl").value;
-			var id=str.substring(str.lastIndexOf("=")+1,str.lastIndexOf(""));
-			window.open('http://www.twstats.se/sv28/index.php?page=tribe&mode=export_villages&export=1&exporttype=custom&continent=&custom=%x|%y&id=' + id,'_blank')
+		function getCoordinates() {
+			url = document.getElementById("nameurl").value;
+			var id=url.substring(url.lastIndexOf("=")+1,url.lastIndexOf(""));
+			if (url.indexOf("tribe") >= 0) {
+				window.open('http://www.twstats.se/sv28/index.php?page=tribe&mode=export_villages&export=1&exporttype=custom&continent=&custom=%x|%y&id=' + id,'_blank');
+			}
+			else if (url.indexOf("player") >= 0) {
+				window.open('http://www.twstats.se/sv28/index.php?page=player&mode=villages&exporttype=custom&custom=%x|%y&export=1&id=' + id,'_blank');
+			}
 		}
 		
 		function generate(){
