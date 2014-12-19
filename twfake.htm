@@ -4,6 +4,9 @@ http://www.twstats.se/index.php?page=search&type=tribe&name=DEATH
 -->
 
 <html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <style>
 input[type="number"] {
    width:50px;
@@ -53,14 +56,14 @@ input[type="number"] {
 		
 		<!--
 		Spjut
-		Sv&auml;rd
+		Svärd
 		Yx
-		B&aring;g
+		Båg
 		Spej
 		Lk
 		Tk
-		Beriden B&aring;g
-		Murbr&auml;ck
+		Beriden Båg
+		Murbräck
 		Kata
 		Paladin
 		Adel
@@ -73,7 +76,7 @@ input[type="number"] {
 				<label for="tribe">Spjut<label>
 				<br>
 				<input type="number" name="sword" value="0" id="sword">
-				<label for="tribe">Sv&auml;rd<label>
+				<label for="tribe">Svärd<label>
 				<br>
 				<input type="number" name="axe" value="0" id="axe">
 				<label for="tribe">Yx<label>
@@ -82,13 +85,13 @@ input[type="number"] {
 				<label for="tribe">Spejare<label>
 				<br>
 				<input type="number" name="light" value="0" id="light">
-				<label for="tribe">L&auml;tt kavallerist<label>
+				<label for="tribe">Lätt kavallerist<label>
 				<br>
 				<input type="number" name="heavy" value="0" id="heavy">
 				<label for="tribe">Tung kavallerist<label>
 				<br>
 				<input type="number" name="ram" value="0" id="ram">
-				<label for="tribe">Murbr&auml;cka<label>
+				<label for="tribe">Murbräcka<label>
 				<br>
 				<input type="number" name="catapult" value="0" id="catapult">
 				<label for="tribe">Katapult<label>
@@ -97,10 +100,10 @@ input[type="number"] {
 				<label for="tribe">Adelsman<label>
 				<br>
 				<input type="number" name="archer" value="0" id="archer">
-				<label for="tribe">B&aring;gskytt<label>
+				<label for="tribe">Bågskytt<label>
 				<br>
 				<input type="number" name="marcher" value="0" id="marcher">
-				<label for="tribe">Beriden B&aring;gskytt<label>
+				<label for="tribe">Beriden Bågskytt<label>
 				<br>
 				<input type="number" name="knight" value="0" id="knight">
 				<label for="tribe">Paladin<label>
@@ -134,7 +137,7 @@ input[type="number"] {
 			knight = document.getElementById("knight").value;
 			coordinates = document.getElementById("coordinates").value;
 			
-			document.getElementById("output").value = "javascript:function%20end(){ c='" + coordinates + "'; var%20d=document; if(window.frames.length>0)d=window.main.document; url=d.URL; if(url.indexOf('screen=place')==-1)alert('G&aring; till samlingsplatsen s&aring; att du kan beordra dina soldater att skoja lite med Meg.'); a=c.match(/(\d+\|\d+)/g); b=a[Math.round(Math.random()*(a.length-1))].split('|'); d.forms[0].x.value=b[0]; d.forms[0].y.value=b[1]; d.forms[0].spear.value=" + spear + "; d.forms[0].sword.value=" + sword + "; d.forms[0].axe.value=" + axe + "; d.forms[0].spy.value=" + spy + "; d.forms[0].light.value=" + light + "; d.forms[0].heavy.value=" + heavy + "; d.forms[0].ram.value=" + ram + "; d.forms[0].catapult.value=" + catapult + "; d.forms[0].snob.value=" + snob + "; d.forms[0].archer.value=" + archer + "; d.forms[0].marcher.value=" + marcher + "; d.forms[0].knight.value=" + knight + "; } end();";
+			document.getElementById("output").value = "javascript:function%20end(){ c='" + coordinates + "'; var%20d=document; if(window.frames.length>0)d=window.main.document; url=d.URL; if(url.indexOf('screen=place')==-1)alert('Gå till samlingsplatsen så att du kan beordra dina soldater att skoja lite med Meg.'); a=c.match(/(\d+\|\d+)/g); b=a[Math.round(Math.random()*(a.length-1))].split('|'); d.forms[0].x.value=b[0]; d.forms[0].y.value=b[1]; d.forms[0].spear.value=" + spear + "; d.forms[0].sword.value=" + sword + "; d.forms[0].axe.value=" + axe + "; d.forms[0].spy.value=" + spy + "; d.forms[0].light.value=" + light + "; d.forms[0].heavy.value=" + heavy + "; d.forms[0].ram.value=" + ram + "; d.forms[0].catapult.value=" + catapult + "; d.forms[0].snob.value=" + snob + "; d.forms[0].archer.value=" + archer + "; d.forms[0].marcher.value=" + marcher + "; d.forms[0].knight.value=" + knight + "; } end();";
 		}
 		</script>
 	</body>
