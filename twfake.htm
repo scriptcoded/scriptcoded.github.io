@@ -1,0 +1,142 @@
+<!--
+http://www.twstats.se/sv28/index.php?page=tribe&mode=export_villages&export=1&exporttype=custom&continent=&custom=%x|%y&id=1553
+http://www.twstats.se/index.php?page=search&type=tribe&name=DEATH
+-->
+
+<html>
+<style>
+input[type="number"] {
+   width:50px;
+}
+
+#div1 {
+	float: left;
+}
+#div2 {
+	float: left;
+}
+#div3 {
+	float: left;
+}
+</style>
+	<head>
+	<title>
+		Script_Coded - TW Faker
+	</title>
+	</head>
+	<body>
+		<!-- Generator UNFINISHED
+		<form action="http://www.twstats.se/index.php">
+			<fieldset>
+			<legend>Search Tribe/Player</legend>
+			<input type="radio" name="type" value="tribe" id="tribe" class="button" checked="checked">
+			<label for="tribe">Tribe<label>
+			<input type="radio" name="type" value="player" id="player" class="button">
+			<label for="player">Player<label>
+			<br>
+			<label for="searchname">Name<label>
+			<br>
+			<input type="text" name="name" value="" id="name" style="width:140; height:24;">
+			<br>
+			<input type="submit" value="search" name="page" style="width:140; height:24;">
+			</fieldset>
+		</form>
+		<form>
+			<fieldset>
+			<legend>Generate script</legend>
+			<label for="">Tribe/Player ID<label>
+			<br>
+			<input type="text" name="searchid" value="" id="id" style="width:140; height:24;">
+			</fieldset>
+		</form>
+		-->
+		
+		<!--
+		Spjut
+		Svärd
+		Yx
+		Båg
+		Spej
+		Lk
+		Tk
+		Beriden Båg
+		Murbräck
+		Kata
+		Paladin
+		Adel
+		-->
+		
+		<fieldset>
+		<legend>Generera fake skript</legend>
+			<div id="div1">
+				<input type="number" name="spear" value="0" id="spear">
+				<label for="tribe">Spjut<label>
+				<br>
+				<input type="number" name="sword" value="0" id="sword">
+				<label for="tribe">Svärd<label>
+				<br>
+				<input type="number" name="axe" value="0" id="axe">
+				<label for="tribe">Yx<label>
+				<br>
+				<input type="number" name="spy" value="0" id="spy">
+				<label for="tribe">Spejare<label>
+				<br>
+				<input type="number" name="light" value="0" id="light">
+				<label for="tribe">Lätt kavallerist<label>
+				<br>
+				<input type="number" name="heavy" value="0" id="heavy">
+				<label for="tribe">Tung kavallerist<label>
+				<br>
+				<input type="number" name="ram" value="0" id="ram">
+				<label for="tribe">Murbräcka<label>
+				<br>
+				<input type="number" name="catapult" value="0" id="catapult">
+				<label for="tribe">Katapult<label>
+				<br>
+				<input type="number" name="snob" value="0" id="snob">
+				<label for="tribe">Adelsman<label>
+				<br>
+				<input type="number" name="archer" value="0" id="archer">
+				<label for="tribe">Bågskytt<label>
+				<br>
+				<input type="number" name="marcher" value="0" id="marcher">
+				<label for="tribe">Beriden Bågskytt<label>
+				<br>
+				<input type="number" name="knight" value="0" id="knight">
+				<label for="tribe">Paladin<label>
+				<br>
+				<input type="button" value="Generera" onclick="generate();" style="width:140; height:24;">
+			</div>
+			<div id="div2">
+				<label for="tribe">Koordinater<label>
+				<br>
+				<input type="text" name="coordinates" value="" id="coordinates">
+				<br>
+			</div>
+			<div id="div3">
+				<textarea name="output" id="output" readonly rows="18" cols="100" onclick="this.focus();this.select()"></textarea>
+			</div>
+		</fieldset>
+	
+		<script>
+		function generate(){
+			spear = document.getElementById("spear").value;
+			sword = document.getElementById("sword").value;
+			axe = document.getElementById("axe").value;
+			spy = document.getElementById("spy").value;
+			light = document.getElementById("light").value;
+			heavy = document.getElementById("heavy").value;
+			ram = document.getElementById("ram").value;
+			catapult = document.getElementById("catapult").value;
+			snob = document.getElementById("snob").value;
+			archer = document.getElementById("archer").value;
+			marcher = document.getElementById("marcher").value;
+			knight = document.getElementById("knight").value;
+			coordinates = document.getElementById("coordinates").value;
+			
+			document.getElementById("output").value = "javascript:function%20end(){ c='" + coordinates + "'; var%20d=document; if(window.frames.length>0)d=window.main.document; url=d.URL; if(url.indexOf('screen=place')==-1)alert('Gå till samlingsplatsen så att du kan beordra dina soldater att skoja lite med Meg.'); a=c.match(/(\d+\|\d+)/g); b=a[Math.round(Math.random()*(a.length-1))].split('|'); d.forms[0].x.value=b[0]; d.forms[0].y.value=b[1]; d.forms[0].spear.value=" + spear + "; d.forms[0].sword.value=" + sword + "; d.forms[0].axe.value=" + axe + "; d.forms[0].spy.value=" + spy + "; d.forms[0].light.value=" + light + "; d.forms[0].heavy.value=" + heavy + "; d.forms[0].ram.value=" + ram + "; d.forms[0].catapult.value=" + catapult + "; d.forms[0].snob.value=" + snob + "; d.forms[0].archer.value=" + archer + "; d.forms[0].marcher.value=" + marcher + "; d.forms[0].knight.value=" + knight + "; } end();";
+		}
+		</script>
+	</body>
+
+<html>
