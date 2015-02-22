@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>My Amazing Mobile First Webpage</title>
+ 
+    <meta name="description" content="A short description of this webpage">
+    <link rel="kik-icon" href="my_icon.png">
+    <link rel="canonical" href="http://example.com/prod/">
+ 
+    <script src="http://cdn.kik.com/kik/1.0.9/kik.js"></script>
+  </head>
+  <body>
+  <script>
+    kik.getUser(function (user) {
+    if ( !user ) {
+        // user denied access to their information
+    } else {
+        alert (user.username);
+    }
+});
+</script>
+  </body>
+</html>
