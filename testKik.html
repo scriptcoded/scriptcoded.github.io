@@ -14,14 +14,14 @@
     if ( !user ) {
         // user denied access to their information
     } else {
-        document.getElementById("user").innerHTML = user.username;
+        document.getElementById("user").value = user.username;
         document.getElementById("full").innerHTML = user.fullname;
         document.getElementById("pic").innerHTML = user.pic;
     }
 });
 </script>
   
-  <div id="user"></div>
+  <input type="text" id="user"></input>
   <p>or known as</p>
   <div id="full"></div>
   <div id="pic"></div>
