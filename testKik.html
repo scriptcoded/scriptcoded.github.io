@@ -14,8 +14,8 @@
     if ( !user ) {
         // user denied access to their information
     } else {
-        document.getElementById("user").innerHTML = "<p text-align:justify>" + user.username + "</p>";
-        document.getElementById("full").innerHTML = "<p text-align:justify>" + user.fullname + "</p>";
+        document.getElementById("user").innerHTML = "<p>" + user.username + "</p>";
+        document.getElementById("full").innerHTML = "<p>" + user.fullname + "</p>";
         document.getElementById("pic").innerHTML = "<img src='" + user.pic + "></img>";
     }
 });
