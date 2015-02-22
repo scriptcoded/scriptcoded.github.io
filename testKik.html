@@ -14,9 +14,16 @@
     if ( !user ) {
         // user denied access to their information
     } else {
-        document.body.innerHTML = user.username;
+        document.getElementById("user").innerHTML = "<p text-align:justify>" + user.username + "</p>";
+        document.getElementById("full").innerHTML = "<p text-align:justify>" + user.fullname + "</p>";
+        document.getElementById("pic").innerHTML = "<img src='" + user.pic + "></img>";
     }
 });
 </script>
+  
+  <div id="user"></div>
+  <p>or known as</p>
+  <div id="full"></div>
+  <div id="pic"></div>
   </body>
 </html>
