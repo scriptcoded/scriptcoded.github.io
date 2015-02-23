@@ -13,6 +13,7 @@
     kik.getUser(function (user) {
     if ( !user ) {
         // user denied access to their information
+        document.getElementById("user").value = "error";
     } else {
         document.getElementById("user").value = user.username;
     }
