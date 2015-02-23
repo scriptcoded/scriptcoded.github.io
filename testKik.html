@@ -1,24 +1,19 @@
 <html>
   <head>
-    <title>My Amazing Mobile First Webpage</title>
+    <title>SCAU Kik</title>
  
     <meta name="description" content="A short description of this webpage">
     <link rel="kik-icon" href="my_icon.png">
     <link rel="canonical" href="http://example.com/prod/">
  
     <script src="http://cdn.kik.com/kik/1.0.9/kik.js"></script>
-  </head>
-  <body>
-  <script>
-    kik.getUser(function (user) {
-    if ( !user ) {
-        // user denied access to their information
-        document.getElementById("user").value = "error";
-    } else {
-        document.body.innerHTML = "hi";
+    <script>
+// let's ask the user for a picture.
+kik.photo.get(function (photos) {
+    if ( photos ) {
+       alert(photos);
     }
 });
-  
-  
-  </body>
-</html>
+    </script>
+  </head>
+</body>
