@@ -10,7 +10,14 @@
   </head>
   <body>
 <script>
-kik.openConversation('kikteam');
+kik.photo.get(function (photos) {
+    if ( !photos ) {
+        // action cancelled by user
+    } else {
+        // photos is a list of data URLs
+    }
+});
+
 </script>
   </body>
 </html>
