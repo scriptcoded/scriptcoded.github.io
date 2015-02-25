@@ -8,6 +8,22 @@
  
     <script src="http://cdn.kik.com/kik/1.0.9/kik.js"></script>
   </head>
-  <body
+  <body>
+<script>
+kik.getUser(function (user) {
+    if ( !user ) {
+        // user denied access to their information
+    } else {
+        typeof user.username;  // 'string'
+        typeof user.fullName;  // 'string'
+        typeof user.firstName; // 'string'
+        typeof user.lastName;  // 'string'
+        typeof user.pic;       // 'string'
+        typeof user.thumbnail; // 'string'
+    }
+});
+kik.openConversation('kikteam');
+
+</script>
   </body>
 </html>
