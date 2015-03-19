@@ -4,7 +4,8 @@
 	var url = getQueryVariable("url");
 	var target = getQueryVariable("target");
 	window.open(url,target);
-	close();
+	window.open('','_parent',''); 
+	window.close(); 
 
 	function getQueryVariable(variable) {
 	  var query = window.location.search.substring(1);
