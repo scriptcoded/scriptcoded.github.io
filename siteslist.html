@@ -24,7 +24,7 @@
         displayChatMessage(message.name, message.text);
       });
       function displayChatMessage(name, text) {
-        $('<a href="' + text + '"><div/>').text(text + '').prepend($('<br><em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('<a href="' + text + '" target="_blank"><div/>').text(text + '').prepend($('<br><em/>').text(name+': ')).appendTo($('#messagesDiv'));
         $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scr011ollHeight;
       };
     </script>
