@@ -1,9 +1,9 @@
 var map = null;
 var markerArray = [];
 var locations = [
-    ['Weird old dock?', 55.596586, 12.928771, 1, 'img/markerWarning.png', 'img/locationThumbnails/oldDock.png'],
-    ['The one and only K well', 55.585927, 12.931623, 2, 'img/markerWarning.png'],
-    ['Centralstationen', 55.608553, 13.000494, 3, 'img/markerWarning.png']
+    ['Weird old dock?', 55.596586, 12.928771, 1, 'http://i.imgur.com/Tk08d2g.png', 'http://i.imgur.com/wUyxNMj.png'],
+    ['The one and only K well', 55.585927, 12.931623, 2, 'http://i.imgur.com/Tk08d2g.png'],
+    ['Centralstationen', 55.608553, 13.000494, 3, 'http://i.imgur.com/Tk08d2g.png']
 ];
 
 function initialize() {
@@ -69,7 +69,7 @@ function initialize() {
     // Add markers to the map
     // Set up markers based on the number of elements within the myPoints array
     for (var i = 0; i < locations.length; i++) {
-        if (!locations[i][5]){locations[i][5]='img/locationThumbnails/noThumbnail.png';}
+        if (!locations[i][5]){locations[i][5]='http://i.imgur.com/zWuY9BN.png';}
         createMarker(new google.maps.LatLng(locations[i][1], locations[i][2]),locations[i][0], locations[i][3], locations[i][4], locations[i][5]);
     }
     mc.addMarkers(markerArray, true);
