@@ -3,7 +3,8 @@ var markerArray = [];
 var locations = [
     ['Weird old dock?', 55.596586, 12.928771, 1, 'http://i.imgur.com/Tk08d2g.png', 'http://i.imgur.com/wUyxNMj.png'],
     ['The one and only K well', 55.585927, 12.931623, 2, 'http://i.imgur.com/Tk08d2g.png'],
-    ['Centralstationen', 55.608553, 13.000494, 3, 'http://i.imgur.com/Tk08d2g.png']
+    ['Centralstationen', 55.608553, 13.000494, 3, 'http://i.imgur.com/Tk08d2g.png'],
+    ['Auschwitz', 4, 50.0293408, 19.202498, 'http://i.imgur.com/Tk08d2g.png']
 ];
 
 function initialize() {
