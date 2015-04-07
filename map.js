@@ -5,7 +5,7 @@ var locations = [
     ['The one and only K well', 55.585927, 12.931623, 2, 'http://i.imgur.com/Tk08d2g.png'],
     ['Centralstationen', 55.608553, 13.000494, 3, 'http://i.imgur.com/Tk08d2g.png'],
     ['Auschwitz', 50.0293408, 19.202498, 4, 'http://i.imgur.com/Tk08d2g.png'],
-    ['Malmborgs :D' 55.581631, 12.935303, 5 'http://i.imgur.com/Tk08d2g.png']
+    ['Malmborgs :D', 55.581631, 12.935303, 5 'http://i.imgur.com/Tk08d2g.png']
 ];
 
 function initialize() {
