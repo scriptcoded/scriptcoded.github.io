@@ -7,10 +7,10 @@
   </head>
   <body>
     <div id='messagesDiv'></div>
-    <input type='text' id='nameInput' placeholder='Name'>
-    <input type='text' id='urlInput' placeholder='Url'>
+    <input type='text' id='nameInput' name='name' placeholder='Name'>
+    <input type='text' id='urlInput' name='url' placeholder='Url'>
     <script>
-      var myDataRef = new Firebase('https://siteslist.firebaseio.com/');
+      var myDataRef = new Firebase('https://iplist.firebaseio.com/');
       $('#urlInput').keypress(function (e) {
         if (e.keyCode == 13) {
           var name = $('#nameInput').val();
