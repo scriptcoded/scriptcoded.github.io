@@ -36,7 +36,7 @@ a {
 	letter-spacing: 1px;
 	width: calc(100% - 3px);
 	padding-left: 3px;
-	z-index: 100;
+	z-index: 1000;
 }
 .menu span {
 	vertical-align: middle;
