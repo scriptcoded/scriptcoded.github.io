@@ -1,0 +1,96 @@
+body {
+	background-color: #d8d8d8;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	//font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.logo {
+	background-color: #312846;
+	font-size: 40px;
+	font-weight: bold;
+	color: #fff;
+	font-style: italic;
+	padding: 10px;
+}
+.logo img{
+	height: 100px;
+}
+#logoSmall {
+	height: 34px;
+	margin: 3px;
+}
+.tagline {
+	color: #fff;
+	font-style: italic;
+	margin: 10px;
+}
+.menu {
+	background: #312846;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	letter-spacing: 1px;
+	//width: calc(100% - 3px);
+	//padding-left: 3px;
+	z-index: 100;
+	box-shadow: 0px 5px 5px #888888;
+	width: 100%;
+	overflow: hidden;
+}
+.menu span {
+	vertical-align: middle;
+	position: absolute;
+	width: 100%;
+}
+.menu #logoSmall {
+	/*display: none;*/
+	//margin-left: calc(-34px - 2px);
+	//margin-left: -34px;
+}
+.menu #menuContent {
+	
+}
+.menuItem {
+	width: 10%;
+	display: inline-block;
+	float:left;
+	background-color: #2a2a2a;
+	box-shadow: inset 10px 7px 10px -4px #1D1D1D;
+	text-align: center;
+	height: 40px;
+	overflow: hidden;
+}
+#menuItem2 {
+	background-color: #312846;
+	//box-shadow: inset 10px -10px 10px -4px #312846;
+	box-shadow: 0px 0px 0px 0px #312846;
+}
+.content {
+	position: relative;
+	background-color: #fff;
+	//width: calc(100% - 76px);
+	width: calc(100% - 400px);
+	margin:0 auto;
+	text-align: left;
+	box-shadow: 0px 5px 5px #888888;
+}
+#leftContent {
+	width: 50%;
+	float: left;
+}
+#rightContent {
+	width: 50%;
+	float: right;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
