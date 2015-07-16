@@ -84,6 +84,7 @@ a {
 	background-color: #fff;
 	//width: calc(100% - 76px);
 	width: calc(100% - 400px);
+	min-width: 800px;
 	min-height: 80vh;
 	margin:0 auto;
 	text-align: left;
