@@ -13,12 +13,6 @@
  font-weight:bold; 
  color:#E5FFFF;
  background-color:#3BA4C7; 
- background-image: -moz-linear-gradient(top, #3BA4C7 0%, #3ba4c7 100%); 
- background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #3ba4c7 100%); 
- background-image: -o-linear-gradient(top, #3BA4C7 0%, #3ba4c7 100%); 
- background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#3ba4c7 100%); 
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba4c7', endColorstr='#3ba4c7',GradientType=0 ); 
- background-image: linear-gradient(top, #3BA4C7 0% ,#3ba4c7 100%);   
  -webkit-box-shadow:0px 0px 20px #bababa, inset 0px 0px -7px #ffffff; 
  -moz-box-shadow: 0px 0px 20px #bababa,  inset 0px 0px -7px #ffffff;  
  box-shadow:0px 0px 20px #bababa, inset 0px 0px -7px #ffffff;
@@ -51,6 +45,7 @@
 .popupMenuClose {
  position: fixed;
  background: red;
+ width: 100%;
 }
 .popupMenu {
  width: 100vw;
@@ -71,10 +66,20 @@
 }
 </style>
 <script>
- $("#popupMenuClose").height = $(window).height - $("#popupMenu").height;
+ $(document).mouseup(function (e)
+ {
+  var container = $("#popupMenu");
+  var containerControl = $("#popupMenuControl");
+  if (!container.is(e.target) // if the target of the click isn't the container...
+   && container.has(e.target).length === 0 // ... nor a descendant of the container
+   && !containerControl.is(e.target))
+   {
+    container.slideToggle();
+    containerControl.slideToggle();
+   }
+ });
 </script>
 	<body>
-<input type="button" value="Open" class="button" onclick="$('#popupMenu').slideToggle();"style="width:140;"/>
 <div id="popupMenuControl" class="popupMenuControl" onclick="$('#popupMenu').slideToggle(); $(this).slideToggle();">
  <p>/\</p>
 </div>
@@ -88,7 +93,7 @@
   </li>
  </ul>
 </div>
-		<!-
+		<!--
 		Medic
 		Spy
 		Cupid
