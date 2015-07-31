@@ -1,0 +1,142 @@
+body {
+	background-color: #d8d8d8;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	//font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+header {
+	width: 100vw;
+}
+footer {
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.logo {
+	background-color: #669900;
+	font-size: 40px;
+	font-weight: bold;
+	color: #fff;
+	font-style: italic;
+	padding: 10px;
+	height: 100%;
+}
+.logo img{
+	height: 100px;
+	image-rendering: pixelated;
+}
+#logoSmall {
+	height: 34px;
+	margin: 3px;
+}
+.tagline {
+	color: #fff;
+	font-style: italic;
+	margin: 10px;
+}
+@media screen and (min-width: 1024px) {
+	.menu {
+		background: #006600;
+		color: #fff;
+		height: 40px;
+		line-height: 40px;
+		letter-spacing: 1px;
+		//width: calc(100% - 3px);
+		//padding-left: 3px;
+		z-index: 100;
+		box-shadow: 0px 5px 5px #888888, inset 10px 7px 10px -4px #1D1D1D;
+		width: 100%;
+		//overflow: hidden;
+	}
+	.menu ul {
+		list-style: none;
+	}
+	.menu ul li ul li {
+		left: 0;
+	}
+	.menu li {
+		left: calc((100vw - (80vw)) / 2);
+		//left: 100px;
+		float:left;
+		display: block;
+		position: relative;
+	}
+	/*
+	.menu span {
+		vertical-align: middle;
+		//position: absolute;
+		width: 100%;
+	}*/
+	.menu #logoSmall {
+		/*display: none;*/
+		//margin-left: calc(-34px - 2px);
+		//margin-left: -34px;
+	}
+	.menu #menuContent {
+		
+	}
+	.menu li a{
+		//position: relative;
+		//width: 10%;
+		display: block;
+		float:left;
+		color: #fff;
+		background-color: #2a2a2a;
+		box-shadow: inset 10px 7px 10px -4px #1D1D1D;
+		text-align: center;
+		height: 40px;
+		overflow: hidden;
+	}
+	/*.sub-menu a {*/
+	.menu li ul {
+		position: absolute;
+		top: 40px;
+		display: none;
+		z-index: 100;
+	}
+	.menu li ul a{
+		background-color: #312846;
+		box-shadow: 0 0 10px #1D1D1D;
+	}
+	.menu li:hover ul {
+		display: block;
+	}
+	.menu li ul li{
+		clear: both;
+	}
+}
+.content {
+	position: relative;
+	background-color: #fff;
+	//width: calc(100% - 76px);
+	width: 80%;
+	//width: calc(100% - 600px);
+	//min-width: 800px;
+	min-width: 550px;
+	min-height: 80vh;
+	margin:0 auto;
+	text-align: left;
+	box-shadow: 0px 5px 5px #888888;
+}
+#leftContent {
+	width: 50%;
+	float: left;
+	padding-left: 20px;
+}
+#rightContent {
+	width: 50%;
+	float: right;
+}
+ul {
+	//list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.liFront img{
+	//display: inline;
+}
