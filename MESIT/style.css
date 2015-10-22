@@ -14,7 +14,8 @@ h1 {
 	font-family: 'Oswald', sans-serif;
 }
 #wrapper {
-	position: relative;
+	position: absolute;
+	top: 0;
 }
 #content {
 	background-color: #fff;
@@ -25,11 +26,13 @@ h1 {
 	box-shadow: 0 0 5px 1px #a8a8a8;
 }
 #sidebar {
-	position: fixed;
+	position: absolute;
 	background-color: #fff;
 	width: 10%;
-	height: 100px;
-	left: 3.5%;
+	height: 300px;
+	margin-top: 21;
+	/*left: 3.5%;*/
+	left: 3%;
 	box-shadow: 0 0 5px 1px #a8a8a8;
 }
 
