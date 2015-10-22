@@ -1,0 +1,48 @@
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="ISO-8859-1" />
+		<meta name="viewport" content="width=devSPACE-width, initial-scale=1.0">
+		<title>Malmö e-sport</title>
+		<meta name="description" content="Malm&ouml; e-sport">
+		<link href="style.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){
+				$('a[href^="#"]').on('click',function (e) {
+					e.preventDefault();
+
+					var target = this.hash;
+					var $target = $(target);
+
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top
+					}, 900, 'swing', function () {
+						window.location.hash = target;
+					});
+				});
+			});
+		</script>
+		<script>
+			function scrollTo(element) {
+				$('html, body').animate({
+					scrollTop: $("" + element).offset().top
+				}, 1000);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="sidebar">
+
+			</div>
+			<div id="content">
+
+			</div>
+			<!--<div id="footer">
+				<small>&copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Malm&ouml; e-sport.</small>
+			</div>-->
+		</div>
+	</body>
+</html>

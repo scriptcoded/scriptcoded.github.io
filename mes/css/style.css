@@ -17,6 +17,21 @@ a {
 	text-decoration: none;
 	color: #000;
 }
+.outlineText {
+    font: Tahoma, Geneva, sans-serif;
+    font-size: 64px;
+    color: white;
+    text-shadow:
+    /* Outline */
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000,  
+    -2px 0 0 #000000,
+    2px 0 0 #000000,
+    0 2px 0 #000000,
+    0 -2px 0 #000000; /* Terminate with a semi-colon */
+}
 .logo {
 	background-color: #312846;
 	font-size: 40px;
