@@ -37,7 +37,9 @@ h1 {
 }
 
 @media (max-width:960px) {
-	display: none;
+	#sidebar {
+		display: none;
+	}
 }
 
 #footer {
