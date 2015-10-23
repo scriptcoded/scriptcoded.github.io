@@ -37,6 +37,9 @@ h1 {
 }
 
 @media (max-width:960px) {
+	#content {
+		width: 90%;
+	}
 	#sidebar {
 		display: none;
 	}
