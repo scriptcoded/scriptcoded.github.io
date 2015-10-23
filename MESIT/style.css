@@ -36,6 +36,10 @@ h1 {
 	box-shadow: 0 0 5px 1px #a8a8a8;
 }
 
+@media (max-width:960px) {
+	display: none;
+}
+
 #footer {
 	text-align: center;
 	height: 80px;
