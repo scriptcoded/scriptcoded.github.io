@@ -78,8 +78,10 @@ h1 {
 		width: auto;
 	}
 	#tapHeader #tapMenuButton {
-		height: 100%;
-		width: auto;
+		height: 40px;
+		width: 40px;
+		background: url(img/tapMenuSmall.png);
+		background-size: cover;
 	}
 	#tapSidebar {
 		position: fixed;

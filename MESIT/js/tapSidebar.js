@@ -1,5 +1,5 @@
 $().ready(function() {
-    $("#filler").click(function() {
+    $("#tapMenuButton").click(function() {
         //body.animate({ right: '200px' });
         alert("Ey!");
     });
