@@ -1,0 +1,686 @@
+/* Let's change the basic things
+----------------------------------------------------------------------------------------------------*/
+
+html,
+body {
+   margin:0;
+   padding:0;
+   min-height:1080px;
+}
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	text-align:justify;
+	font-size:15px;
+	overflow-y:scroll;
+	background: url('../images/bg/background_alt.png') top center repeat-x, url('../images/bg/background-bottom.png') bottom left repeat-x;
+
+	background-color:#000;
+}
+
+.plumbr {
+   background: url("../images/jumpjump.gif") 0 0 no-repeat;
+   position:relative;
+   height:82px; width: 15px;
+   margin-bottom:-82px;
+   top: 116px; left:-56px;
+}
+
+p {
+	padding-top:0px;
+	padding-bottom:0px;
+	margin:0px;
+	margin-bottom:15px;  /* make sure to fit UL */
+	line-height:1.5em;
+}
+
+h1 {
+	font-size:22px;
+	height:32px;
+	vertical-align:top;
+	font-weight:bold;
+	text-shadow:#000 2px 2px 2px;
+	margin: 0px -20px 6px -20px;
+	padding-left:20px;
+	padding-right:20px;
+	background: url('../images/bg/heading2bg.png') bottom;
+	background-repeat:no-repeat;
+}
+
+h2 {
+	font-size:18px;
+	font-weight:bold;
+	text-shadow:#000 2px 2px 2px;
+	margin-bottom:10px;
+	margin-top:0px;
+}
+
+ul {
+	margin:0;
+	margin-bottom:25px; /* make sure to fit P */
+	list-style-type: none;
+	padding:0;
+	padding-left:15px;
+}
+
+li {
+       margin-left:-15px;
+       background: url("../images/bg/dot.png") no-repeat 0px 5px;
+       padding-left:15px;
+       margin-top:1em;
+}
+
+b {
+	text-shadow:2px 2px 1px #000;
+}
+
+/* Change the 960.gs things so it fits our needs */
+
+.container_4 {
+	padding-top:25px;
+}
+
+.grid_1,
+.grid_2,
+.grid_4 {
+	background-color:#333;
+	border-radius: 7px;
+}
+
+.grid_1 {
+	margin-bottom:10px;
+}
+
+.grid_3 {
+	border-radius: 20px;
+}
+
+/* Padding divs so content fits */
+
+.pad {
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.pad2 {
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+}
+
+
+/*Logo container
+----------------------------------------------------------------------------------------------------*/
+
+#logocnt {
+   position:relative;
+   margin-left:-3px;
+   width: 230px;
+   height: 160px;
+}
+
+#clicklogo {
+   position:relative;
+   margin-left:10px;
+   display: block;
+   width: 230px;
+   height: 160px;
+   background: url('../images/site/logo-site-magical.png') 0px 0px;
+   outline:0;
+   background-repeat:no-repeat;
+   overflow:hidden;
+}
+#clicklogo:hover {
+   background-position: -230px 0px;
+}
+
+/* rudely stolen from fail0verflow.com. Please don't send assassins <3 */
+#logo-foreground {
+   position: absolute; bottom: 0; left: 0; z-index: 200;
+   width: 230px; height: 160px;
+   background: transparent url('../images/site/logo-site-magical.png') no-repeat 0px -160px;
+}
+#logo-foreground:hover {
+   background-position: -230px -160px;
+}
+
+#logo-colorizer {
+   position: absolute; bottom: 0; left: 230px; z-index: 100;
+   width: 230px; height: 64px;
+   background: transparent url('../images/site/logo-site-magical.png') no-repeat 0 -320px;
+}
+
+
+/* Main Menubar
+----------------------------------------------------------------------------------------------------*/
+
+.menulink {
+	display:block;
+	position:relative;
+	height:69px;
+	width:200px;
+	margin-bottom:10px;
+	outline:0;
+	text-decoration:none;
+	color:#FFF;
+	border-width:0;
+	border-style:hidden;
+}
+
+.menulink:hover {
+	outline:#9BE solid 2px;
+	outline-offset:-2px;
+	text-decoration:none;
+	color:#9BE;
+	border-style:solid;
+}
+.menulink:visited {
+	text-decoration:none;
+	/*fix for chrome and ie7. surprise*/
+}
+
+.menulink .textcnt {
+	display:block;
+	position:absolute;
+	top:0;
+	right:0;
+	font-size:12px;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:6px;
+	padding-right:6px;
+	background:#111;
+	border-bottom-left-radius:7px;
+	border-left:#9BE 2px solid;
+	border-bottom:#9BE 2px solid;
+	border-top:#FFF 0px hidden;
+	border-right:#FFF 0px hidden;
+	border-style:inherit;
+	
+	color:inherit;
+	font-weight:bold;
+}
+
+.menulink .wiptag {
+	/*MAURICE WANTED THIS*/
+	background-color:#400;
+}
+
+/*Social networks things container
+----------------------------------------------------------------------------------------------------*/
+.sociallink, .forumlink{
+	position:relative;
+	display:inline-block;
+	width: 32px;
+	height: 32px;
+	background-position:0px 0px;
+	outline:0;
+	margin:0;
+	margin-top:0px;
+	margin-right:10px;
+	margin-bottom:8px;
+	vertical-align:top;
+}
+
+.forumlink {
+	background-image:url('../images/forum_16.png');
+	margin-right:0;
+	width: 200px;
+	height: 16px;
+	margin-bottom:9px;
+	display:block;
+}
+
+.forumlink:hover{
+	background-position:0px 16px;
+}
+
+.sociallink:hover {
+	background-position:0px 32px;
+}
+
+.socialspacer {
+	display:none;
+	width:10px;
+	height:10px;
+}
+
+
+/*Content title bar container
+----------------------------------------------------------------------------------------------------*/
+
+.contenttitle {
+	height:120px;
+	width:660px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding:0px;
+	padding-left:20px;
+	padding-right:20px;
+	display:block;
+	position:relative;
+}
+
+.contenttitle p {
+	font-size:70px;
+	text-shadow:#000 0 0 15px, #000 0 0 15px, #000 0 0 15px, #000 0 0 15px, #000 0 0 15px;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+	top:10px;
+	left:20px;
+	position:absolute;
+	z-index:10;
+	cursor:default;
+	
+	line-height:normal;
+}
+
+.contenttitle p.p2 {
+	color:#000;
+	top:14px;
+	left:24px;
+	text-shadow:none;
+	z-index:1;
+	/* LOOK WHAT YOU MADE ME DO IE */
+}
+
+/* Tab bar container
+----------------------------------------------------------------------------------------------------*/
+
+.tabbar {
+	position:absolute;
+	bottom:0;
+}
+
+.tabbar a {
+	display:inline-block;
+	font-size:16px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:10px;
+	padding-right:10px;
+	background:#111;
+	
+	border:0;
+	margin-right:10px;
+	
+	color:#DDD;
+	font-weight:bold;
+	outline:0;
+	text-decoration:none;
+	text-align:center;
+	
+	border-left:transparent 2px solid;
+	border-right:transparent 2px solid;
+	border-top:transparent 2px solid;
+	
+
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+}
+
+.tabbar a:hover {
+	text-decoration:none;
+	color:#9BE;
+	
+	margin-left:0px;
+	margin-right:10px;
+	margin-top:0px;
+	
+	border-left:#9BE 2px solid;
+	border-right:#9BE 2px solid;
+	border-top:#9BE 2px solid;
+}
+
+.tabbar a:visited {
+	text-decoration:none;
+	/*fix for chrome and ie7. surprise*/
+}
+
+.tabbar a.current {
+	background:#333;
+	text-shadow:2px 2px 1px #000;
+	
+	border-left:#FFF 2px solid;
+	border-right:#FFF 2px solid;
+	border-top:#FFF 2px solid;
+	color:#FFF;
+}
+
+.tabbar a.current:hover {
+	color:#FFF;
+}
+
+
+/*Content container
+----------------------------------------------------------------------------------------------------*/
+.contentpad{
+	padding:20px;
+	padding-top:15px;
+	margin-bottom:10px;
+	
+	border-bottom-left-radius:7px;
+	border-bottom-right-radius:7px;
+	
+	background-color:#333;
+	background-image:url('../images/bg/text-bg.png');
+	background-position:top;
+	background-repeat:repeat-x;
+}
+
+
+.contentpad a {
+	font-size:inherit;
+	font-weight:inherit;
+	color:inherit;
+	text-decoration:underline;
+}
+.contentpad a:visited {
+	color:inherit;
+	text-decoration:underline;
+}
+.contentpad a:hover {
+	color:#6BE;
+	text-decoration:underline;
+}
+
+
+.dl-container {
+	padding-top:10px;
+	margin-left:-10px;
+	margin-right:-10px;
+	text-align:center;
+}
+
+.dl-container a {
+	display:inline-block;
+	width: 152px;
+	height: 57px;
+	background-position:top;
+	outline:0;
+	margin-left:9px;
+	margin-right:9px;
+}
+
+.dl-container a:hover {
+	background-position:bottom;
+}
+
+.win { background: url('../images/site/downloadwindows.png'); }
+.nix { background: url('../images/site/downloadlinux.png'); }
+.osx { background: url('../images/site/downloadosx.png'); }
+.src { background: url('../images/site/downloadsource.png'); }
+
+
+
+/* Screenshot resize thingy.
+----------------------------------------------------------------------------------------------------*/
+.scr-resize {
+	text-align:center;
+	background-color:#222;
+	margin-bottom:25px;
+	padding-top:8px;
+	padding-bottom:4px;
+	margin-top:-10px;
+	margin-left:-20px;
+	margin-right:-20px;
+	/*because P has padding below and this is supposed to come
+	after p. if it doesn't just MAKE MORE CSS*/
+}
+
+.scr-resize img {
+	display:inline-block;
+	height:120px;
+	width:120px;
+	margin:0;
+	margin-left:3px;
+	margin-right:3px;
+	border:#222 2px solid;
+	border-radius:7px;
+}
+
+.scr-resize img:hover {
+	border:#9BE 2px solid;
+}
+
+/* Tumblr stuff so stuff looks neat
+----------------------------------------------------------------------------------------------------*/
+#tumblrcontainer {
+	position:relative;
+}
+
+.tumblrcontainer img {
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.tumblr {
+	margin:-20px;
+	margin-top:-15px;
+	padding:20px;
+	position:relative;
+	padding-bottom:25px;
+	background-image:url('../images/bg/text-bg.png');
+	background-position:top;
+	background-repeat:repeat-x;
+	min-height:300px;
+}
+
+.nobg {
+	background-image:none;	
+}
+
+.tumblrdate {
+	float:left;
+	color:#DDD;
+	top:0;
+	left:0;
+	width:60px;
+	height:60px;
+	background-color:#111;
+	text-align:center;
+	padding-left:20px;
+	border-radius:0px 7px 7px 0px;
+	margin-right:10px;
+	margin-left:-20px;
+	cursor:default;
+}
+.tumblrday {
+	height:42px;
+	font-size:40px;
+	font-weight:bold;
+}
+.tumblrmonth {
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+
+.tumblrtitle{
+	position:absolute;
+	float:none;
+	top:27px;
+	left:90px;
+	height:32px;
+	width:590px;
+	font-size:22px;
+	font-weight:bold;
+	padding-right:20px;
+	
+	text-shadow:#000 2px 2px 2px;
+	background: url('../images/bg/heading2bg.png') bottom;
+	background-repeat:no-repeat;
+}
+.tumblrtitle a {
+	font-size:inherit;
+	font-weight:inherit;
+	color:inherit;
+	text-decoration:none;
+}
+.tumblrtitle a:visited {
+	color:inherit;
+	text-decoration:none;
+}
+.tumblrtitle a:hover {
+	color:#6BE;
+	text-decoration:underline;
+}
+
+.tumblrbody {
+	padding-top:42px;
+	max-width:680px;
+	min-height:258px;
+}
+
+.tumblrbody img {
+   margin-bottom: 15px;
+}
+
+.tumblrbody li {
+	margin-top:0.5em;
+}
+
+.tumblrcomment {
+	display:block;
+	position:relative;
+	float:right;
+	height:23px;
+	width:20px;
+	padding:0px;
+	margin-top:4px;
+	
+	background-image: url('../images/commentbubble.png');
+	color:#000;
+	text-align:center;
+}
+.tumblrcomment a,
+.tumblrcomment a:visited,
+.tumblrcomment a:hover {
+	font-size:10px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:none;
+	vertical-align:top;
+	-webkit-transform: translateY(1px);
+	display: inline-block;
+}
+
+.youtube-old {
+	/*for youtube embeds n stuff*/
+	padding:0;
+	margin:0;
+	margin-left:-10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:660px;
+	height:525px;
+	border:#222 10px solid;
+	border-radius:7px;
+}
+
+.youtube {
+	/*for FANCY youtube embeds.*/
+	background: #000 url('../images/ytbg.png') center no-repeat;
+	padding:0;
+	margin-left:-20px;
+	margin-right:-20px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:700px;
+	height:397px; /* +3px for seek bar*/
+}
+
+.archivelink {
+	/*copypasta from scr-resize*/
+	text-align:center;
+	background-color:#222;
+	border-radius:7px;
+	padding-top:8px;
+	padding-bottom:4px;
+	margin-top:20px;
+	margin-left:-9px;
+	margin-right:-9px;
+	margin-bottom:-9px;
+}
+
+.sideimage {
+	padding:10px;
+	padding-right:0px;
+	padding-top:0px;
+	margin:0px;
+	text-align:right;
+}
+
+.thumb {
+	max-width:660px;
+	height:auto;
+}
+
+/*EXTENDING CLASSES SAVES A LOT OF WORK BUT I'M TERRIBLE*/
+
+.lowcp {
+	margin-top:0px;
+	margin-bottom:20px;
+	padding:20px;
+	padding-top:15px;
+	border-radius:7px;
+	background-color:#333;
+}
+.lowcp a {
+	font-size:inherit;
+	font-weight:inherit;
+	color:inherit;
+	text-decoration:underline;
+}
+.lowcp a:visited {
+	color:inherit;
+	text-decoration:underline;
+}
+.lowcp a:hover {
+	color:#6BE;
+	text-decoration:underline;
+}
+.lowcp li {
+	list-style-image:none;
+}
+
+.countandnav {
+	text-align:right;
+	margin-top:15px;
+}
+
+
+.offset {
+   margin-left:-20px;
+   margin-right:-20px;
+}
+
+
+/*HIDE USELESS GARBAGE*/
+
+.hide {
+	display:none;
+}
+
+/* GET FIREFOX MSIE USERS (okay msie9 is not bad, but it still doesn't show the text shadow)
+----------------------------------------------------------------------------------------------------*/
+
+.getfirefox {
+	position:fixed;
+	display:block;
+	z-index:5;
+	bottom:0;
+	right:0;
+	height:138px;
+	width:100px;
+	background-image:url("../images/getfirefox.png");
+	outline:0;
+}
+
+.getfirefox:visited {
+	outline:0;	
+}

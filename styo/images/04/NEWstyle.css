@@ -1,0 +1,573 @@
+/* Let's change the basic things
+----------------------------------------------------------------------------------------------------*/
+
+html,
+body {
+   margin:0;
+   padding:0;
+   min-height:1080px;
+   cursor:url('cursor.gif'), default;
+}
+img {width:123%; height:123%;}
+
+body {
+	font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+	color:white;
+	text-align:justify;
+	font-size:15px;
+	overflow-y:scroll;
+	background-color:#FFBBFF;
+        background: url('grrl.gif')repeat;
+}
+
+p {
+        text-transform: lowercase;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin:0px;
+	margin-bottom:15px;  /* make sure to fit UL */
+	line-height:1.5em;
+}
+
+h1 {
+	font-size:22px;
+	height:32px;
+	vertical-align:top;
+	font-weight:600;
+	margin: 0px -20px 6px -20px;
+	padding-left:20px;
+	padding-right:20px;
+        background: url('spacer.gif') left bottom;
+	background-repeat:repeat-x;
+}
+
+h2 {
+	font-size:18px;
+	font-weight:600;
+	margin-bottom:10px;
+	margin-top:0px;
+}
+
+ul {
+	margin:0;
+	margin-bottom:25px; /* make sure to fit P */
+	list-style-type: none;
+	padding:0;
+	padding-left:15px;
+}
+
+li {
+       margin-left:-15px;
+       background: url("../bg/dot.png") no-repeat 0px 5px;
+       padding-left:15px;
+       margin-top:1em;
+}
+
+b {
+	font-weight: bolder;
+}
+
+/* Change the 960.gs things so it fits our needs */
+
+.container_4 {
+	padding-top:25px;
+}
+
+.grid_1,
+.grid_2,
+.grid_4 {
+	background-color:#FF6AED;
+        background-image: url('bg999.gif');
+}
+
+.grid_1 {
+	margin-bottom:10px;
+}
+
+.grid_3 {
+}
+
+/* Padding divs so content fits */
+
+.pad {
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.pad2 {
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+}
+
+
+/*Logo container
+----------------------------------------------------------------------------------------------------*/
+
+#logocnt {
+   position:relative;
+   margin-left:-3px;
+   width: 230px;
+   height: 160px;
+}
+
+#clicklogo {
+   position:relative;
+   margin-left:10px;
+   display: block;
+   width: 230px;
+   height: 160px;
+   background: url('webspacelogo.gif') 0px 0px;
+   outline:0;
+   background-repeat:no-repeat;
+   overflow:hidden;
+}
+#clicklogo:hover {
+   background-position: -230px 0px;
+}
+
+
+/* Main Menubar
+----------------------------------------------------------------------------------------------------*/
+
+.menulink {
+	display:block;
+	position:relative;
+	height:69px;
+	width:200px;
+	margin-bottom:10px;
+	outline:0;
+	border-width:0;
+	border-style:hidden;
+}
+
+.menulink:hover {
+	border:#54124E solid 9px;
+	border-style:solid;
+}
+.menulink:visited {
+	text-decoration:none;
+	/*fix for chrome and ie7. surprise*/
+}
+
+.menulink .textcnt {
+	display:block;
+	position:absolute;
+	top:0;
+	right:0;
+	font-size:12px;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:6px;
+	padding-right:6px;
+	background:#F78DEE;
+	border-left:#54124E 5px solid;
+	border-bottom:#54124E 5px solid;
+	border-top:#FFF 0px hidden;
+	border-right:#FFF 0px hidden;
+	border-style:inherit;
+	
+	color:inherit;
+	font-weight:600;
+}
+
+.menulink .wiptag {
+	/*MAURICE WANTED THIS*/
+	background-color:#400;
+}
+
+/*Social networks things container
+----------------------------------------------------------------------------------------------------*/
+.sociallink, .forumlink{
+	position:relative;
+	display:inline-block;
+	width: 32px;
+	height: 32px;
+	background-position:0px 0px;
+	outline:0;
+	margin:0;
+	margin-top:0px;
+	margin-right:10px;
+	margin-bottom:8px;
+}
+
+.forumlink {
+	background-image:url('../forum_16.png');
+	margin-right:0;
+	width: 200px;
+	height: 16px;
+}
+
+.forumlink:hover{
+	height: 32px;
+}
+
+.sociallink:hover {
+	height: 64px;
+}
+
+.socialspacer {
+	display:none;
+	width:10px;
+	height:10px;
+}
+
+
+/*Content title bar container
+----------------------------------------------------------------------------------------------------*/
+
+.contenttitle {
+	height:160px;
+	width:1600px;
+	font-family:"Times New Roman", serif;
+	padding:0px;
+	padding-left:20px;
+	padding-right:20px;
+	display:block;
+	position:relative;
+}
+
+.contenttitle p {
+        marquee-style: scroll;
+        marquee-direction: ltr;
+        text-transform: uppercase;
+	font-size:70px;
+	background-color: #FF00FB;
+	font-weight:600;
+	margin:0px;
+	padding:0px;
+	top:10px;
+	left:20px;
+	position:absolute;
+	z-index:10;
+    cursor:url('cursor.gif'), default;
+	
+	line-height:normal;
+}
+
+.contenttitle p.p2 {
+	color:#000;
+	top:14px;
+	left:24px;
+
+	z-index:1;
+	/* LOOK WHAT YOU MADE ME DO IE */
+}
+
+/* Tab bar container
+----------------------------------------------------------------------------------------------------*/
+
+.tabbar {
+	position:absolute;
+	bottom:0;
+}
+
+.tabbar a {
+	display:inline-block;
+	font-size:16px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:10px;
+	padding-right:10px;
+	background:#F78DEE;
+	
+	border:0;
+	margin-right:10px;
+
+	font-weight:600;
+	outline:0;
+	text-align:center;
+	
+	border-left:transparent 2px solid;
+	border-right:transparent 2px solid;
+	border-top:transparent 2px solid;
+}
+
+
+.tabbar a.current {
+	background:#FF6AED;
+	
+	border-left:#FFF 2px solid;
+	border-right:#FFF 2px solid;
+	border-top:#FFF 2px solid;
+}
+
+
+/*Content container
+----------------------------------------------------------------------------------------------------*/
+.contentpad{
+	padding:20px;
+	padding-top:15px;
+	margin-bottom:10px;
+	
+	background-color:#FF6AED;
+}
+
+
+.contentpad a {
+	font-size:inherit;
+	font-weight:inherit;
+}
+
+
+.dl-container {
+	padding-top:10px;
+	margin-left:-10px;
+	margin-right:-10px;
+	text-align:center;
+}
+
+.dl-container a {
+	display:inline-block;
+	width: 152px;
+	height: 57px;
+	background-position:top;
+	outline:0;
+	margin-left:9px;
+	margin-right:9px;
+}
+
+.dl-container a:hover {
+	background-position:bottom;
+}
+
+.win { background: url('../site/downloadwindows.png'); }
+.nix { background: url('../site/downloadlinux.png'); }
+.osx { background: url('../site/downloadosx.png'); }
+.src { background: url('../site/downloadsource.png'); }
+
+
+
+/* Screenshot resize thingy.
+----------------------------------------------------------------------------------------------------*/
+.scr-resize {
+	text-align:center;
+	background-color:#222;
+	margin-bottom:25px;
+	padding-top:8px;
+	padding-bottom:4px;
+	margin-top:-10px;
+	margin-left:-20px;
+	margin-right:-20px;
+	/*because P has padding below and this is supposed to come
+	after p. if it doesn't just MAKE MORE CSS*/
+}
+
+.scr-resize img {
+	display:inline-block;
+	height:120px;
+	width:120px;
+	margin:0;
+	margin-left:3px;
+	margin-right:3px;
+	border:#222 2px solid;
+}
+
+.scr-resize img:hover {
+	border:#54124E 2px solid;
+}
+
+/* Tumblr stuff so stuff looks neat
+----------------------------------------------------------------------------------------------------*/
+#tumblrcontainer {
+	position:relative;
+}
+
+.tumblrcontainer img {
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.tumblr {
+	margin:-20px;
+	margin-top:-15px;
+	padding:20px;
+	position:relative;
+	padding-bottom:25px;
+	background-position:top;
+	background-repeat:repeat-x;
+	min-height:300px;
+}
+
+.nobg {
+	background-image:none;	
+}
+
+.tumblrdate {
+	float:left;
+	color:#FFE8E8;
+	top:0;
+	left:0;
+	width:60px;
+	height:60px;
+	background-color:#F78DEE;
+	text-align:center;
+	padding-left:20px;
+	margin-right:0px;
+	margin-left:-20px;
+        cursor:url('cursor.gif'), default;
+        background-image: url('bg999.gif');
+}
+.tumblrday {
+	height:42px;
+	font-size:40px;
+	font-weight:700;
+}
+.tumblrmonth {
+	font-size:12px;
+	font-weight:700;
+	text-transform:uppercase;
+}
+
+
+.tumblrtitle{
+	position:absolute;
+	float:none;
+	top:27px;
+	left:40px;
+	height:32px;
+	width:590px;
+	font-size:22px;
+	font-weight:600;
+	padding-right:20px;
+	
+	background: url('spacer.gif') left bottom;
+	background-repeat:repeat-x;
+}
+.tumblrtitle a {
+	font-size:inherit;
+	font-weight:inherit;
+}
+
+.tumblrbody {
+	padding-top:42px;
+	max-width:680px;
+	min-height:258px;
+}
+
+.tumblrbody li {
+	margin-top:0.5em;
+}
+
+.tumblrcomment {
+	display:block;
+	position:relative;
+	float:right;
+	height:29px;
+	width:32px;
+	padding:0px;
+	margin-top:4px;
+	background-color:white;
+	background-image: url('comment.gif');
+	color:#000;
+	text-align:center;
+}
+.tumblrcomment a,
+.tumblrcomment a:visited,
+.tumblrcomment a:hover {
+	font-size:17px;
+	font-weight:600;
+	vertical-align:top;
+}
+
+.youtube-old {
+	/*for youtube embeds n stuff*/
+	padding:0;
+	margin:0;
+	margin-left:-10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:660px;
+	height:525px;
+	border:#222 10px solid;
+}
+
+.youtube {
+	/*for FANCY youtube embeds.*/
+	padding:0;
+	margin-left:-20px;
+	margin-right:-20px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:700px;
+	height:397px; /* +3px for seek bar*/
+}
+
+.archivelink {
+	/*copypasta from scr-resize*/
+	text-align:center;
+	background-color:#222;
+	padding-top:8px;
+	padding-bottom:4px;
+	margin-top:20px;
+	margin-left:-9px;
+	margin-right:-9px;
+	margin-bottom:-9px;
+}
+
+.sideimage {
+	padding:10px;
+	padding-right:0px;
+	padding-top:0px;
+	margin:0px;
+	text-align:right;
+}
+
+.thumb {
+	max-width:660px;
+	height:auto;
+}
+
+/*EXTENDING CLASSES SAVES A LOT OF WORK BUT I'M TERRIBLE*/
+
+
+}
+.lowcp li {
+	list-style-image:none;
+}
+
+.countandnav {
+	text-align:right;
+	margin-top:15px;
+}
+
+
+.offset {
+   margin-left:-20px;
+   margin-right:-20px;
+}
+
+
+/*HIDE USELESS GARBAGE*/
+
+.hide {
+	display:none;
+}
+
+/* GET FIREFOX MSIE USERS (okay msie9 is not bad, but it still doesn't show the text shadow)
+----------------------------------------------------------------------------------------------------*/
+
+.getfirefox {
+	position:fixed;
+	display:block;
+	z-index:5;
+	bottom:0;
+	right:0;
+	height:138px;
+	width:100px;
+	background-image:url("../getfirefox.png");
+	outline:0;
+}
+
+.getfirefox:visited {
+	outline:0;	
+}
+
+
+
+
+a:hover {
+    cursor:url('cursor.gif'), default;
+    color:#FF0000;
+}
