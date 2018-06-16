@@ -1,0 +1,85 @@
+* { padding: 0; margin: 0; }
+
+body {
+  font-size: 3.9vw;
+  font-family:
+    // Safari for OS X and iOS (San Francisco)
+    -apple-system,
+    // Chrome < 56 for OS X (San Francisco)
+    BlinkMacSystemFont,
+    // Windows
+    "Segoe UI",
+    // Android
+    "Roboto",
+    // Basic web fallback
+    "Helvetica Neue", Arial, sans-serif,
+    // Emoji fonts
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+.rel-list {
+  position: relative;
+  width: 100%;
+}
+.rel-row {
+  position: relative;
+  width: 100%;
+
+  @extend %clearfix;
+}
+.rel-title {
+  font-size: 1.5em;
+}
+.rel-title,
+.rel-rating,
+.rel-extra {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.rel-thumb {
+  float: left;
+  width: 40%;
+
+  img {
+    width: 100%;
+  }
+}
+.rel-info {
+  float: left;
+  box-sizing: border-box;
+  width: 60%;
+  padding: 0 8px;
+}
+.rel-list-empty {
+  margin-top: 1.2em;
+  font-size: 2em;
+  text-align: center;
+}
+
+.template {
+  display: none;
+}
+
+/* Clearfix */
+%clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+%clearfix {
+  display: inline-block;
+}
+html[xmlns] %clearfix {
+  display: block;
+}
+* html %clearfix {
+  height: 1%;
+}
