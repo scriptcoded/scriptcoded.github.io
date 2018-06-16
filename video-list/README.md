@@ -36,3 +36,26 @@ Example:
 Result:
 
 ![](https://i.imgur.com/u2jpQet.png)
+
+If necessary, you may wrap your array in an object with the key `videos`:
+
+```
+{
+  "videos": [
+    {
+      "thumb": "http://blog.axelradclinic.com/wp-content/uploads/2015/06/video-thumbnail.jpg",
+      "title": "Video title",
+      "rating": "100% - 142k views",
+      "extra": "InterestingFilms",
+      "link": "#someUrl"
+    },
+    {
+      "thumb": "http://blog.axelradclinic.com/wp-content/uploads/2015/06/video-thumbnail.jpg",
+      "title": "Another video title",
+      "rating": "57% - 32M views",
+      "extra": "Cool_Cool_Ye",
+      "link": "#someOtherUrl"
+    }
+  ]
+}
+```
