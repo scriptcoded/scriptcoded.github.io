@@ -7,6 +7,10 @@ if (videosString) {
   videos = JSON.parse(videosString)
 }
 
+if (videos.videos) {
+  videos = videos.videos
+}
+
 var rowTemplate = $('#template-rel-row').children().first()
 var videoList = $('#rel-list')
 
