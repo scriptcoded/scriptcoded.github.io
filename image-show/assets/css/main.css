@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.image {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/*# sourceMappingURL=main.css.map */

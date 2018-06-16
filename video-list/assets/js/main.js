@@ -36,12 +36,12 @@ if (videos.length) {
  */
 function getQueryParam (name, url) {
   if (!url) { url = window.location.href }
-  
+
   name = name.replace(/[\[\]]/g, '\\$&')
-  
+
   var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
   var results = regex.exec(url)
-  
+
   if (!results) { return null }
   if (!results[2]) { return '' }
 
