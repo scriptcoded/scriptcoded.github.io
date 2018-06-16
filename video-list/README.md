@@ -25,7 +25,7 @@ Example:
   },
   {
     "thumb": "http://blog.axelradclinic.com/wp-content/uploads/2015/06/video-thumbnail.jpg",
-    "title": "Another vide title",
+    "title": "Another video title",
     "rating": "57% - 32M views",
     "extra": "Cool_Cool_Ye",
     "link": "#someOtherUrl"

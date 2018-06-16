@@ -57,6 +57,10 @@ body {
   text-align: center;
 }
 
+.rel-link {
+  display: block;
+}
+
 .rel-link, .rel-link:active, .rel-link:hover, .rel-link:visited {
   color: initial;
   text-decoration: none;
@@ -67,7 +71,7 @@ body {
 }
 
 /* Clearfix */
-.rel-row:after {
+.rel-row:after, .rel-link:after {
   content: ".";
   display: block;
   clear: both;
@@ -76,15 +80,15 @@ body {
   height: 0;
 }
 
-.rel-row {
+.rel-row, .rel-link {
   display: inline-block;
 }
 
-html[xmlns] .rel-row {
+html[xmlns] .rel-row, html[xmlns] .rel-link {
   display: block;
 }
 
-* html .rel-row {
+* html .rel-row, * html .rel-link {
   height: 1%;
 }
 /*# sourceMappingURL=main.css.map */
