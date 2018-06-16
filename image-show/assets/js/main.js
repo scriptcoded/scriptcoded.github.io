@@ -1,9 +1,14 @@
 /* global $ */
 
 $(function () {
-  var $image = $('.image')
-  
+  var $image = $('#image')
+  var link = getQueryParam('link')
+
   $image.css('background-image', 'url(' + getQueryParam('src') + ')')
+
+  if (link) {
+    $image.wrap('<a href="' + link + '">')
+  }
 })
 
 /**
