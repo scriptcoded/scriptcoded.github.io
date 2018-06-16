@@ -57,6 +57,11 @@ body {
   text-align: center;
 }
 
+.rel-link, .rel-link:active, .rel-link:hover, .rel-link:visited {
+  color: initial;
+  text-decoration: none;
+}
+
 .template {
   display: none;
 }

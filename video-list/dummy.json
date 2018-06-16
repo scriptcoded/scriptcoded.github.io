@@ -3,12 +3,14 @@
     "thumb": "http://blog.axelradclinic.com/wp-content/uploads/2015/06/video-thumbnail.jpg",
     "title": "Video title",
     "rating": "100% - 142k views",
-    "extra": "InterestingFilms"
+    "extra": "InterestingFilms",
+    "link": "#someUrl"
   },
   {
     "thumb": "http://blog.axelradclinic.com/wp-content/uploads/2015/06/video-thumbnail.jpg",
-    "title": "Video title",
-    "rating": "100% - 142k views",
-    "extra": "InterestingFilms"
+    "title": "Another vide title",
+    "rating": "57% - 32M views",
+    "extra": "Cool_Cool_Ye",
+    "link": "#someOtherUrl"
   }
 ]

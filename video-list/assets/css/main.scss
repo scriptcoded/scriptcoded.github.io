@@ -60,6 +60,15 @@ body {
   font-size: 2em;
   text-align: center;
 }
+.rel-link {
+  &,
+  &:active,
+  &:hover,
+  &:visited {
+    color: initial;
+    text-decoration: none;
+  }
+}
 
 .template {
   display: none;

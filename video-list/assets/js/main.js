@@ -19,6 +19,7 @@ if (videos.length) {
     videoElem.find('.rel-title').text(video.title)
     videoElem.find('.rel-rating').text(video.rating)
     videoElem.find('.rel-extra').text(video.extra)
+    videoElem.find('.rel-link').attr('href', video.link)
 
     videoElem.appendTo(videoList)
   }
