@@ -1,0 +1,10 @@
+body {
+  background-color: #1a1a28;
+  background-image: url(wave.png);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 50% auto;
+}
+.logo {
+  margin: 0 auto;
+}
